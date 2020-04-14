@@ -1,6 +1,9 @@
 export const initialState = {
-  car:'ford'
+  car:''
 }
+
+// 
+
 
 
 export const appReducer = (state = initialState, action) => {

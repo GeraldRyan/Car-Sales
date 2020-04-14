@@ -20,3 +20,9 @@ ReactDOM.render(
       <App />
   </Provider>
   , rootElement);
+
+
+
+  // here we wrapped up App inside Provider from react-redux library
+  // in order to do so w/o crashing we needed to give it a store attribute
+  // in order to do that we had to declare a store variable which is the return of the createStore function with our reducer param. Don't overthink this now just see how this is and make mental note that there is something here, an important connection. 
