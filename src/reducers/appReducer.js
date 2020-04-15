@@ -15,10 +15,6 @@ export const initialState = {
   ]
 }
 
-// Now how to find out what initialState should be. 
-
-
-
 
 export const appReducer = (state = initialState, action) =>
 {
@@ -31,10 +27,11 @@ export const appReducer = (state = initialState, action) =>
         car: { ...state.car, features: [...state.car.features, action.payload] }
       }
     case 'REMOVE_FEATURE':
+      console.log("remove feature", action.payload)
       return {
         ...state,
         additionalPrice: state.additionalPrice - action.payload.price,
-        car: { ...state.car, features: [...state.car.features, action.payload] } // NEED TO ADD FILTER METHOD
+        car: { ...state.car, features: state.car.features.filter((obj)=>obj.id!==action.payload.id) } 
       }
     default:
       return state

@@ -8,12 +8,15 @@ import Total from './components/Total';
 
 const App = () => {
 
-  const removeFeature = item => {
+  const buyItem = item => {
     // dispatch an action here to remove an item
   };
+  
 
-  const buyItem = item => {
+  const removeFeature = item => {
     // dipsatch an action here to add an item
+    console.log("Running Actions addItem", item)
+    return {type: "ADD_FEATURE", payload:item}
   };
 
   return (
